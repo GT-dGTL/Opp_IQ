@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <defs>
+    <linearGradient id="oppiq-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="9" fill="url(#oppiq-grad)"/>
+  <path d="M20 7 L17.2 17.6 A3 3 0 0 1 15.1 19.7 L4.5 22.5 L15.1 25.3 A3 3 0 0 1 17.2 27.4 L20 38 L22.8 27.4 A3 3 0 0 1 24.9 25.3 L35.5 22.5 L24.9 19.7 A3 3 0 0 1 22.8 17.6 Z" fill="#FFFFFF"/>
+  <circle cx="30.5" cy="9.5" r="3.4" fill="#FFFFFF" fill-opacity="0.55"/>
+</svg>

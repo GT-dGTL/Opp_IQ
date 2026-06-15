@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tax Invoice SES/INV/2026/0734 — Sunline EPC Solutions Pvt. Ltd.</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef1f6;
+    color: #1a1b25;
+    padding: 24px;
+    font-size: 13px;
+  }
+  .sheet {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #c7c9d6;
+    padding: 32px 36px;
+  }
+  .letterhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #D97706;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+  }
+  .letterhead .brand {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #D97706;
+  }
+  .letterhead .brand span { color: #1a1b25; }
+  .letterhead .brand-sub {
+    font-size: 11px;
+    color: #6B7280;
+    margin-top: 2px;
+    letter-spacing: 0.04em;
+  }
+  .letterhead .meta {
+    text-align: right;
+    font-size: 11.5px;
+    color: #4b4d5c;
+    line-height: 1.6;
+  }
+  .doc-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin: 14px 0 18px;
+    text-transform: uppercase;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid #c7c9d6;
+    margin-bottom: 14px;
+  }
+  .meta-grid > div {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e4ed;
+    border-right: 1px solid #e2e4ed;
+  }
+  .meta-grid > div:nth-child(2n) { border-right: none; }
+  .meta-grid > div:nth-last-child(-n+2) { border-bottom: none; }
+  .meta-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6B7280;
+    margin-bottom: 3px;
+  }
+  .meta-value { font-weight: 600; }
+  .parties {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .party-box {
+    border: 1px solid #c7c9d6;
+    padding: 12px 14px;
+  }
+  .party-box h4 {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6B7280;
+    margin-bottom: 6px;
+  }
+  .party-box .name { font-weight: 700; margin-bottom: 4px; }
+  .party-box .addr { line-height: 1.6; color: #3c3d49; }
+  .party-box .gstin { margin-top: 6px; font-weight: 600; }
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 14px;
+  }
+  table.items th, table.items td {
+    border: 1px solid #c7c9d6;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  table.items th {
+    background: #fdf3e7;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: #4b4d5c;
+    text-align: left;
+  }
+  table.items td.num, table.items th.num { text-align: right; }
+  .summary-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+  table.summary {
+    border-collapse: collapse;
+    width: 320px;
+  }
+  table.summary td {
+    padding: 6px 10px;
+    font-size: 12.5px;
+    border-bottom: 1px solid #e2e4ed;
+  }
+  table.summary td:last-child { text-align: right; font-weight: 600; }
+  table.summary tr.total td {
+    border-top: 2px solid #1a1b25;
+    border-bottom: none;
+    font-weight: 800;
+    font-size: 14px;
+    padding-top: 8px;
+  }
+  .words {
+    font-size: 12.5px;
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    background: #f7f8fb;
+    border: 1px solid #e2e4ed;
+  }
+  .words strong { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: #6B7280; margin-bottom: 3px; }
+  .bank-and-terms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .bank-and-terms .box {
+    border: 1px solid #c7c9d6;
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .bank-and-terms h4 {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6B7280;
+    margin-bottom: 6px;
+  }
+  .signature {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+  }
+  .signature .box {
+    width: 220px;
+  }
+  .signature .line {
+    margin-top: 46px;
+    border-top: 1px solid #1a1b25;
+    padding-top: 6px;
+    font-size: 11.5px;
+    color: #4b4d5c;
+  }
+  .footer-note {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 10.5px;
+    color: #9CA3AF;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .sheet { border: none; max-width: 100%; }
+    .print-btn { display: none; }
+  }
+  .print-btn {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto 12px;
+    text-align: right;
+  }
+  .print-btn button {
+    background: #D97706;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .print-btn button:hover { background: #b45309; }
+</style>
+</head>
+<body>
+  <div class="print-btn">
+    <button onclick="window.print()">Save as PDF (Print → Save as PDF)</button>
+  </div>
+  <div class="sheet">
+    <div class="letterhead">
+      <div>
+        <div class="brand">Sunline <span>EPC Solutions Pvt. Ltd.</span></div>
+        <div class="brand-sub">Plot No. 12, RIICO Industrial Area, Bhiwadi, Alwar District, Rajasthan – 301019</div>
+        <div class="brand-sub">GSTIN: 08AALCS9182H1ZP &nbsp;|&nbsp; PAN: AALCS9182H</div>
+      </div>
+      <div class="meta">
+        Email: accounts@sunlineepc-india.example<br/>
+        Phone: +91 144 287 3300<br/>
+        State: Rajasthan (08)
+      </div>
+    </div>
+
+    <div class="doc-title">Tax Invoice</div>
+
+    <div class="meta-grid">
+      <div>
+        <div class="meta-label">Invoice No.</div>
+        <div class="meta-value">SES/INV/2026/0734</div>
+      </div>
+      <div>
+        <div class="meta-label">Invoice Date</div>
+        <div class="meta-value">18-May-2026</div>
+      </div>
+      <div>
+        <div class="meta-label">Purchase Order Ref.</div>
+        <div class="meta-value">PO-CSR1-2026-0142 dated 22-May-2026</div>
+      </div>
+      <div>
+        <div class="meta-label">Payment Terms</div>
+        <div class="meta-value">Net 30 Days (Due 17-Jun-2026)</div>
+      </div>
+      <div>
+        <div class="meta-label">Place of Supply</div>
+        <div class="meta-value">Rajasthan (08)</div>
+      </div>
+      <div>
+        <div class="meta-label">Reverse Charge Applicable</div>
+        <div class="meta-value">No</div>
+      </div>
+    </div>
+
+    <div class="parties">
+      <div class="party-box">
+        <h4>Billed By</h4>
+        <div class="name">Sunline EPC Solutions Pvt. Ltd.</div>
+        <div class="addr">Plot No. 12, RIICO Industrial Area,<br/>Bhiwadi, Alwar District, Rajasthan – 301019</div>
+        <div class="gstin">GSTIN: 08AALCS9182H1ZP</div>
+      </div>
+      <div class="party-box">
+        <h4>Billed To</h4>
+        <div class="name">Continuum Solar Rajasthan One Pvt. Ltd.</div>
+        <div class="addr">Project Site, Village Bhadla, Tehsil Phalodi,<br/>Jodhpur District, Rajasthan – 342312</div>
+        <div class="gstin">GSTIN: 08AAJCC7734N1Z8</div>
+      </div>
+    </div>
+
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:6%">#</th>
+          <th>Description of Goods / Services</th>
+          <th style="width:10%">HSN</th>
+          <th style="width:8%" class="num">Qty</th>
+          <th style="width:14%" class="num">Rate (₹)</th>
+          <th style="width:14%" class="num">Amount (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Supply of Solar PV Modules — 545 Wp Bifacial Mono-PERC Tier-1 (Sunline Astra-545)</td>
+          <td>85414300</td>
+          <td class="num">500 Nos</td>
+          <td class="num">9,450.00</td>
+          <td class="num">47,25,000.00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Supply of String Inverters — 110 kW (Sunline InvertX-110)</td>
+          <td>85044090</td>
+          <td class="num">4 Nos</td>
+          <td class="num">2,85,000.00</td>
+          <td class="num">11,40,000.00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Supply of Hot-Dip Galvanized Mounting Structures (Fixed-Tilt)</td>
+          <td>73089090</td>
+          <td class="num">1 Lot</td>
+          <td class="num">3,80,000.00</td>
+          <td class="num">3,80,000.00</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Installation, Testing &amp; Commissioning Services</td>
+          <td>998733</td>
+          <td class="num">1 Lot</td>
+          <td class="num">2,50,000.00</td>
+          <td class="num">2,50,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary-wrap">
+      <table class="summary">
+        <tr><td>Taxable Value</td><td>₹ 64,95,000.00</td></tr>
+        <tr><td>CGST @ 9%</td><td>₹ 5,84,550.00</td></tr>
+        <tr><td>SGST @ 9%</td><td>₹ 5,84,550.00</td></tr>
+        <tr><td>Round Off</td><td>₹ 0.00</td></tr>
+        <tr class="total"><td>Total Invoice Value</td><td>₹ 76,64,100.00</td></tr>
+      </table>
+    </div>
+
+    <div class="words">
+      <strong>Amount in Words</strong>
+      Rupees Seventy-Six Lakh Sixty-Four Thousand One Hundred Only
+    </div>
+
+    <div class="bank-and-terms">
+      <div class="box">
+        <h4>Bank Details</h4>
+        Bank Name: ICICI Bank Ltd<br/>
+        Branch: Bhiwadi Industrial Area Branch, Rajasthan<br/>
+        Account Name: Sunline EPC Solutions Pvt. Ltd.<br/>
+        Account No.: 0345 8821 0067 2<br/>
+        IFSC Code: ICIC0003456
+      </div>
+      <div class="box">
+        <h4>Terms &amp; Notes</h4>
+        Goods once supplied will not be taken back.<br/>
+        Interest @ 18% p.a. will be charged on overdue payments.<br/>
+        Subject to Jaipur jurisdiction only.
+      </div>
+    </div>
+
+    <div class="signature">
+      <div class="box">
+        <div class="line">Authorized Signatory<br/>Sunline EPC Solutions Pvt. Ltd.</div>
+      </div>
+    </div>
+
+    <div class="footer-note">This is a system-generated sample document created for the OppIQ demo. Not a real transaction.</div>
+  </div>
+</body>
+</html>
